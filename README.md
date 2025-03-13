@@ -35,3 +35,22 @@ The application consumes an external REST API, calculates **annual salaries**, a
 - A business class (e.g., **EJB**) must compute the **annual salary** of an employee using:  
   ```java
   employee_anual_salary = employee_salary * 12;
+
+### **🚀 How to Run the Application
+- Prerequisites
+  -Ensure you have the following installed:
+
+   -JDK 1.8+
+   -Maven
+   -Wildfly Server (if not using Spring Boot's embedded server)
+   -Git
+
+### **Run the Application (Spring Boot)
+ - mvn spring-boot:run
+
+### **Run Unit Tests
+- mvn test
+
+### **🌐 Access the Application
+🔹 Employee List: http://localhost:8080/employees
+🔹 Search Employee by ID: http://localhost:8080/employees/{id}
