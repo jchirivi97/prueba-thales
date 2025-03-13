@@ -1,50 +1,37 @@
+# **Employee Management Application**  
 
-The Candidate must deliver a software application according to the following requirements:
-1 Baseline Requirements
- The application must be designed using good design practices and coding (describe the most relevant)
- The application must be done using an Open Source Java IDE of choice (recommended: IntelliJ Idea community, Netbeans IDE, Eclipse IDE)
- The solution must be published in a public DVCS repository, such as GitHub
- The solution will be downloaded, compiled and executed in a developer machine to verify a correct configuration management approach. Therefore, the solution must be published with all the artifacts and instructions to compile and execute the application
- Basic Object Oriented Programming principles must be used, such as Inheritance, abstraction, encapsulation
- SOLID principles must be used
-2 Application Requirements ID Summary
-1
-Create an MVC application.
-Can be based in Spring(or Spring Boot), JSF, Struts or Vaadin
-2
-The application must be delivered in a WAR file
-3
-The application must be deploy-able in a Wildfly Server or Spring boot auto container
-4
-The application must use JDK 1.8+
-5
-Create a Data Access Layer to consume the following REST APIs:
- http://dummy.restapiexample.com/api/v1/employees
- http://dummy.restapiexample.com/api/v1/employee/1
-These API methods return a list of employees and employee data by ID
-6
-Create a Business class (EJB, for example) to compute the following value:
-employee_anual_salary = employee_salary x 12
-7
-Create a Controller Class with methods to return the employees list and employee data by ID
-8
-Create a view to show the employee information, the view must present the following components and behavior:
- One text box, where the user can input the employee ID
- One button to execute the Employee search
- If the input text box is empty, the search result must return the complete employee list
- If the text box contains a valid employee ID, the search result must return the particular employee information
- The returned employee list must be shown in a table or grid, including the employee_anual_salary computation
-9
-User Interface Guidelines:
-* The application must use Bootstrap or Material Design
-* The application must contain a Menu and brand Image
-Desirable technologies to use on the front-end (use 1, complementary to the Application framework selected):
-1. Javascript/Typescript
-2. Angular
-3. JQuery
-4. ReactJS
-5. VueJS
-   
-10 The application must include Unitary Tests for at least one of the Business Layer methods. Using JUnit5
+## **📌 Project Overview**  
+This project is a **Java MVC application** designed to manage employee information. It follows **good design and coding practices**, including **SOLID principles** and **Object-Oriented Programming (OOP)** concepts such as **inheritance, abstraction, and encapsulation**.  
 
+The application consumes an external REST API, calculates **annual salaries**, and displays employee data in a user-friendly interface.  
 
+---
+
+## **📂 Baseline Requirements**  
+✔️ The application must follow good software design and coding practices.  
+✔️ Developed using an **Open Source Java IDE** (Recommended: **IntelliJ IDEA Community, NetBeans, Eclipse**).  
+✔️ The solution must be published in a **public GitHub repository** and include:  
+   - All necessary artifacts  
+   - Clear instructions to **compile** and **execute** the application  
+✔️ Uses **SOLID principles** and **OOP best practices**.  
+
+---
+
+## **📌 Application Requirements**  
+
+### **1️⃣ Project Setup**  
+- The application must be structured following the **MVC (Model-View-Controller) pattern**.  
+- The backend must be implemented using **Spring Boot**, **JSF**, **Struts**, or **Vaadin**.  
+- The final application must be packaged as a **WAR file**.  
+- It must be **deployable on Wildfly Server** or **Spring Boot's embedded container**.  
+- Requires **JDK 1.8+**.  
+
+### **2️⃣ Data Access Layer**  
+- The application must consume the following **REST APIs**:  
+  - Get all employees: `http://dummy.restapiexample.com/api/v1/employees`  
+  - Get an employee by ID: `http://dummy.restapiexample.com/api/v1/employee/{id}`  
+
+### **3️⃣ Business Logic Layer**  
+- A business class (e.g., **EJB**) must compute the **annual salary** of an employee using:  
+  ```java
+  employee_anual_salary = employee_salary * 12;
