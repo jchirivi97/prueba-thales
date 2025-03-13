@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: testThales
+  rest:
+    url:
+      all: 'http://dummy.restapiexample.com/api/v1/employees'
+      employee: 'http://dummy.restapiexample.com/api/v1/employee/'
