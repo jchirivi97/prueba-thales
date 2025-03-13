@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/info")
+@RequestMapping("/api")
 public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/all")
+    /**
+     * Funcion que recibe la petición para consultar todos los empleados
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/employees")
     public ResponseEntity<List<Employee>> getClientAll(){
 
         List<Employee> employees = employeeService.allEmployee();
@@ -25,10 +29,15 @@ public class EmployeeController {
 
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/employee")
-    public  ResponseEntity<Employee> getClient(@RequestBody Employee employee){
+    /**
+     * Funcion para consultar un empleado por Id
+     * @param id
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST, path = "/employees/{id}")
+    public  ResponseEntity<Employee> getClient(@PathVariable("id") int id ){
 
-        Employee restEmployee = employeeService.employeebyId(employee.getId());
+        Employee restEmployee = employeeService.employeebyId(id);
 
         return ResponseEntity.ok(restEmployee);
     }

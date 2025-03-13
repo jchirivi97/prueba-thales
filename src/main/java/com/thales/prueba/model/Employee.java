@@ -13,4 +13,10 @@ public class Employee {
     private int age;
     private String profile_img;
 
+    public Employee(int i, String jane_smith, int i1, int i2, String s) {
+    }
+
+    public Employee(){
+
+    }
 }
